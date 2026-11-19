@@ -1,5 +1,15 @@
 # Équipements en Île-de-France - rapport Power BI
 
+## Télécharger et ouvrir
+
+1. Installe [Power BI Desktop sur Windows](https://powerbi.microsoft.com/desktop/).
+2. [Télécharge le projet en ZIP](https://github.com/ArilesD/rapport-stage-power-bi/archive/refs/heads/main.zip) et fais **Extraire tout**.
+3. Ouvre le dossier extrait puis double-clique sur **OUVRIR.cmd**, ou ouvre directement **Equipements-IDF-Stage.pbix**.
+
+Les données enregistrées dans le rapport permettent d’utiliser les filtres dès l’ouverture. Pour commencer, ouvre **Départements - 2024** et sélectionne un domaine. L’actualisation des sources demande la connexion SQLite/ODBC décrite plus bas.
+
+Les captures ci-dessous sont consultables dans un navigateur sur Windows, macOS et Linux.
+
 Pendant mon stage en préfecture, j’ai conçu un rapport pour comparer les équipements recensés en Seine-Saint-Denis et dans les autres départements franciliens. Le rapport présente la situation en 2024 et son évolution entre 2019 et 2024.
 
 ![Onglet Départements 2024 dans Power BI, avec les filtres, les densités et la comparaison entre population et nombre d’équipements](apercu-departements.png)
