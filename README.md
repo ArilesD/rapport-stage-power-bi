@@ -38,22 +38,10 @@ L’évolution compare seulement les équipements comparables entre 2019 et 2024
 - Concevoir la base SQLite dans DBeaver et charger les tables avec Talend Open Studio.
 - Relier les tables dans Power BI, puis créer les mesures DAX et les graphiques.
 
-<details>
-<summary>Sources, limites et actualisation</summary>
+## Sources et limites
 
-### Sources et limites
+Les équipements viennent de la [Base permanente des équipements de l’Insee](https://www.insee.fr/fr/metadonnees/source/operation/s2216/bases-donnees-ligne), et le référentiel communal de l’[API Géo](https://geo.api.gouv.fr/). Les salaires communaux datent de **2014** : [source Insee republiée sur Kaggle sous CC0](https://www.kaggle.com/datasets/etiennelq/french-employment-by-town).
 
-- Dénombrement des équipements en 2024 et évolution de 2019 à 2024. [Insee - Base permanente des équipements 2024](https://www.insee.fr/fr/metadonnees/source/operation/s2216/bases-donnees-ligne)
-- Référentiel géographique des communes. [API Géo](https://geo.api.gouv.fr/)
-- Population par commune et par tranche d’âge utilisée pendant le stage. Le millésime de la population importée n’est pas indiqué dans le modèle Power BI. La mesure régionale d’origine inclut aussi la population de douze codes communaux absents du référentiel utilisé. Les densités sont les résultats du modèle de stage et doivent se lire avec cette réserve.
-- Salaires horaires nets moyens de 2014 agrégés à l’échelle communale. Le fichier utilisé en stage provient d’un jeu de données Insee republié sur Kaggle sous CC0. [Kaggle - French employment by town](https://www.kaggle.com/datasets/etiennelq/french-employment-by-town) · [Insee - Historique des salaires horaires nets](https://www.insee.fr/fr/statistiques/8629963)
+La population utilisée par le modèle inclut aussi douze codes communaux absents du référentiel. Les densités restent celles du modèle de stage et se lisent avec cette réserve ; elles ne mesurent ni la capacité d’accueil ni les temps de trajet.
 
-Les densités comparent le nombre d’équipements à la population. Elles ne mesurent ni la capacité d’accueil ni le temps de trajet. Pour actualiser les tables, il faut disposer de la base SQLite du stage et configurer sa connexion ODBC `LBD_Equipements`. Les deux cartes d’origine utilisent Bing Maps, dont Power BI annonce le retrait. [Microsoft Learn - Cartes choroplèthes](https://learn.microsoft.com/fr-fr/power-bi/visuals/power-bi-visualization-filled-maps-choropleths)
-
-Sur le premier onglet, la sélection initiale contient **368 904** équipements. En ajoutant Paris, le total atteint **498 225**. L’indicateur **IDF entière / 10 000 hab.** inclut Paris dans les deux cas.
-
-[Insee - Comparabilité de la BPE en évolution](https://www.insee.fr/fr/metadonnees/source/operation/s2216/coherence-comparabilite) · [Extrait de la page Départements 2024](apercu-departements.png)
-
-Dans Power Query, l’harmonisation porte notamment sur les codes des arrondissements parisiens et le code communal `75056`.
-
-</details>
+L’actualisation des données nécessite la base SQLite du stage et sa connexion ODBC. Les cartes Bing Maps dépendent des paramètres et de leur prise en charge dans Power BI. [Documentation des cartes](https://learn.microsoft.com/fr-fr/power-bi/visuals/power-bi-visualization-filled-maps-choropleths).
