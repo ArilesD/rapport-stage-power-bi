@@ -4,21 +4,21 @@ Pendant mon stage en préfecture, j’ai conçu un rapport pour comparer les éq
 
 ## Aperçu du projet
 
-![Capture de l’onglet Évolution des départements dans Power BI Desktop, avec comparaison de 2019 et 2024.](docs/apercu.png)
+![Aperçu de l’onglet Évolution des départements, exporté directement depuis le rapport, avec comparaison de 2019 et 2024.](docs/apercu.png)
 
-Capture de l’onglet Évolution des départements dans Power BI Desktop, avec comparaison de 2019 et 2024. Le graphique par domaine précise les limites de comparaison pour l’enseignement et le tourisme.
+Aperçu de l’onglet Évolution des départements, exporté directement depuis le rapport, avec comparaison de 2019 et 2024. Le graphique par domaine précise les limites de comparaison pour l’enseignement et le tourisme.
 
 [Voir la capture en grand format](docs/apercu.png) · [Mon parcours et mes autres projets](https://github.com/ArilesD)
 
 ## Télécharger et ouvrir
 
-1. Installe [Power BI Desktop sur Windows](https://powerbi.microsoft.com/desktop/).
+1. Installe [Power BI Desktop](https://powerbi.microsoft.com/desktop/).
 2. [Télécharge le projet en ZIP](https://github.com/ArilesD/rapport-stage-power-bi/archive/refs/heads/main.zip) et fais **Extraire tout**.
 3. Ouvre le dossier extrait puis double-clique sur **OUVRIR.cmd**, ou ouvre directement **Equipements-IDF-Stage.pbix**.
 
 Les données enregistrées dans le rapport permettent d’utiliser les filtres dès l’ouverture. Pour commencer, ouvre **Départements - 2024** et sélectionne un domaine. L’actualisation des sources demande la connexion SQLite/ODBC décrite plus bas.
 
-[Consulter aussi l’extrait de l’onglet Départements 2024](apercu-departements.png). Les aperçus sont accessibles dans un navigateur sur Windows, macOS et Linux.
+[Consulter aussi l’extrait de l’onglet Départements 2024](apercu-departements.png). Les aperçus se consultent directement dans un navigateur.
 
 
 ## Explorer le rapport
