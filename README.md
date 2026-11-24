@@ -4,9 +4,9 @@ Pendant mon stage en préfecture, j’ai conçu un rapport pour comparer les éq
 
 ## Aperçu du projet
 
-![Extrait de l’onglet Départements 2024 du rapport public. Paris est masqué dans le filtre initial et reste sélectionnable.](docs/apercu.png)
+![Capture de l’onglet Évolution des départements dans Power BI Desktop, avec comparaison de 2019 et 2024.](docs/apercu.png)
 
-Extrait de l’onglet Départements 2024 du rapport public. Paris est masqué dans le filtre initial et reste sélectionnable.
+Capture de l’onglet Évolution des départements dans Power BI Desktop, avec comparaison de 2019 et 2024. Le graphique par domaine précise les limites de comparaison pour l’enseignement et le tourisme.
 
 [Voir la capture en grand format](docs/apercu.png) · [Mon parcours et mes autres projets](https://github.com/ArilesD)
 
@@ -18,7 +18,7 @@ Extrait de l’onglet Départements 2024 du rapport public. Paris est masqué da
 
 Les données enregistrées dans le rapport permettent d’utiliser les filtres dès l’ouverture. Pour commencer, ouvre **Départements - 2024** et sélectionne un domaine. L’actualisation des sources demande la connexion SQLite/ODBC décrite plus bas.
 
-[Consulter la capture fixe en haute définition](apercu-departements.png). Les aperçus sont accessibles dans un navigateur sur Windows, macOS et Linux.
+[Consulter aussi l’extrait de l’onglet Départements 2024](apercu-departements.png). Les aperçus sont accessibles dans un navigateur sur Windows, macOS et Linux.
 
 
 ## Explorer le rapport
