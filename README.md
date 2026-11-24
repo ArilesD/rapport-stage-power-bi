@@ -4,11 +4,11 @@ Pendant mon stage en préfecture, j’ai conçu un rapport pour comparer les éq
 
 ## Aperçu du projet
 
-![Montage de captures de l’onglet Départements 2024 du rapport public. Paris est masqué dans le filtre initial et reste sélectionnable.](docs/presentation.gif)
+![Extrait de l’onglet Départements 2024 du rapport public. Paris est masqué dans le filtre initial et reste sélectionnable.](docs/apercu.png)
 
-Montage de captures de l’onglet Départements 2024 du rapport public. Paris est masqué dans le filtre initial et reste sélectionnable.
+Extrait de l’onglet Départements 2024 du rapport public. Paris est masqué dans le filtre initial et reste sélectionnable.
 
-[Voir la vidéo en grand format](docs/presentation.mp4) · [Mon parcours et mes autres projets](https://github.com/ArilesD)
+[Voir la capture en grand format](docs/apercu.png) · [Mon parcours et mes autres projets](https://github.com/ArilesD)
 
 ## Télécharger et ouvrir
 
