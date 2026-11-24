@@ -1,49 +1,47 @@
-# Équipements en Île-de-France - rapport Power BI
+# Équipements en Île-de-France - Power BI
 
-Pendant mon stage en préfecture, j’ai conçu un rapport pour comparer les équipements recensés en Seine-Saint-Denis et dans les autres départements franciliens. Le rapport présente la situation en 2024 et son évolution entre 2019 et 2024.
+Pendant mon stage à la Préfecture de la Seine-Saint-Denis, j’ai conçu un rapport pour comparer les équipements des départements et communes franciliens : situation en 2024 et évolution depuis 2019.
+
+**Outils :** Power BI, Power Query, DAX, SQLite, DBeaver et Talend Open Studio.
 
 ## Aperçu du projet
 
-![Aperçu de l’onglet Évolution des départements, exporté directement depuis le rapport, avec comparaison de 2019 et 2024.](docs/apercu.png)
+![Comparaison des équipements en 2019 et 2024 dans l’onglet Évolution des départements.](docs/apercu.png)
 
-Aperçu de l’onglet Évolution des départements, exporté directement depuis le rapport, avec comparaison de 2019 et 2024. Le graphique par domaine précise les limites de comparaison pour l’enseignement et le tourisme.
-
-[Voir la capture en grand format](docs/apercu.png) · [Mon parcours et mes autres projets](https://github.com/ArilesD)
+[Voir l’image en grand format](docs/apercu.png)
 
 ## Télécharger et ouvrir
 
-1. Installe [Power BI Desktop](https://powerbi.microsoft.com/desktop/).
+1. Installe [Power BI Desktop](https://powerbi.microsoft.com/desktop/) si besoin.
 2. [Télécharge le projet en ZIP](https://github.com/ArilesD/rapport-stage-power-bi/archive/refs/heads/main.zip) et fais **Extraire tout**.
-3. Ouvre le dossier extrait puis double-clique sur **OUVRIR.cmd**, ou ouvre directement **Equipements-IDF-Stage.pbix**.
+3. Ouvre le dossier extrait et double-clique sur **OUVRIR.cmd**, ou ouvre directement **Equipements-IDF-Stage.pbix**.
 
-Les données enregistrées dans le rapport permettent d’utiliser les filtres dès l’ouverture. Pour commencer, ouvre **Départements - 2024** et sélectionne un domaine. L’actualisation des sources demande la connexion SQLite/ODBC décrite plus bas.
-
-[Consulter aussi l’extrait de l’onglet Départements 2024](apercu-departements.png). Les aperçus se consultent directement dans un navigateur.
-
+Les données sont déjà enregistrées dans le rapport : tu peux parcourir les pages et utiliser les filtres dès l’ouverture.
 
 ## Explorer le rapport
 
-Ouvrir [Equipements-IDF-Stage.pbix](Equipements-IDF-Stage.pbix) dans Power BI Desktop. Les données enregistrées permettent de parcourir les cinq onglets et d’utiliser les filtres dès l’ouverture.
-
-| Onglet | Ce qu’il montre |
+| Page | Ce qu’elle montre |
 | --- | --- |
 | Départements - 2024 | Volumes, densités et répartition des équipements par domaine |
-| Évolution des départements | Évolution par département et par domaine entre 2019 et 2024 |
-| Communes - 2024 | Comparaisons communales avec la population et les salaires moyens disponibles |
-| Évolution des communes | Évolution de la présence des équipements par commune |
+| Évolution des départements | Comparaison de 2019 et 2024 |
+| Communes - 2024 | Comparaisons communales avec la population et les salaires disponibles |
+| Évolution des communes | Évolution des équipements par commune |
 | Communes du 93 | Comparaison des communes de Seine-Saint-Denis |
 
-Sur le premier onglet, le filtre **Secteur géographique** masque Paris à l’ouverture. Son volume d’équipements élargit l’échelle des graphiques et rend les écarts entre les sept autres départements moins visibles. En cochant Paris, le total passe de **368 904** à **498 225** équipements. La carte **IDF entière / 10 000 hab.** sert de repère régional et inclut Paris dans les deux cas.
+Paris est masqué à l’ouverture pour mieux lire les écarts entre les autres départements. Tu peux le sélectionner dans **Secteur géographique**.
 
-L’onglet d’évolution compare les types d’équipement que l’Insee juge comparables entre 2019 et 2024. Dans l’enseignement, le fichier d’évolution couvre uniquement l’enseignement agricole. Pour le tourisme, les chiffres concernent les types suivis sur les deux années. Le graphique affiche les effectifs exacts, y compris ceux inférieurs à 1 000. [Insee - Comparabilité de la BPE en évolution](https://www.insee.fr/fr/metadonnees/source/operation/s2216/coherence-comparabilite)
+L’évolution compare seulement les équipements comparables entre 2019 et 2024. L’enseignement couvre ici l’enseignement agricole ; le tourisme est limité aux types suivis sur les deux années. Les densités dépendent du modèle de population du stage, dont le millésime n’est pas documenté.
 
 ## Mon travail
 
-- Harmoniser dans Power Query les types de données et les codes géographiques. Certaines sources utilisaient les codes des arrondissements parisiens, d’autres le code communal `75056`.
+- Préparer et harmoniser les données avec Power Query.
 - Concevoir la base SQLite dans DBeaver et charger les tables avec Talend Open Studio.
-- Relier les communes, les départements et la nomenclature des équipements dans Power BI, puis créer des mesures DAX pour rapporter les volumes à 10 000 habitants.
+- Relier les tables dans Power BI, puis créer les mesures DAX et les graphiques.
 
-## Sources et limites
+<details>
+<summary>Sources, limites et actualisation</summary>
+
+### Sources et limites
 
 - Dénombrement des équipements en 2024 et évolution de 2019 à 2024. [Insee - Base permanente des équipements 2024](https://www.insee.fr/fr/metadonnees/source/operation/s2216/bases-donnees-ligne)
 - Référentiel géographique des communes. [API Géo](https://geo.api.gouv.fr/)
@@ -51,3 +49,11 @@ L’onglet d’évolution compare les types d’équipement que l’Insee juge c
 - Salaires horaires nets moyens de 2014 agrégés à l’échelle communale. Le fichier utilisé en stage provient d’un jeu de données Insee republié sur Kaggle sous CC0. [Kaggle - French employment by town](https://www.kaggle.com/datasets/etiennelq/french-employment-by-town) · [Insee - Historique des salaires horaires nets](https://www.insee.fr/fr/statistiques/8629963)
 
 Les densités comparent le nombre d’équipements à la population. Elles ne mesurent ni la capacité d’accueil ni le temps de trajet. Pour actualiser les tables, il faut disposer de la base SQLite du stage et configurer sa connexion ODBC `LBD_Equipements`. Les deux cartes d’origine utilisent Bing Maps, dont Power BI annonce le retrait. [Microsoft Learn - Cartes choroplèthes](https://learn.microsoft.com/fr-fr/power-bi/visuals/power-bi-visualization-filled-maps-choropleths)
+
+Sur le premier onglet, la sélection initiale contient **368 904** équipements. En ajoutant Paris, le total atteint **498 225**. L’indicateur **IDF entière / 10 000 hab.** inclut Paris dans les deux cas.
+
+[Insee - Comparabilité de la BPE en évolution](https://www.insee.fr/fr/metadonnees/source/operation/s2216/coherence-comparabilite) · [Extrait de la page Départements 2024](apercu-departements.png)
+
+Dans Power Query, l’harmonisation porte notamment sur les codes des arrondissements parisiens et le code communal `75056`.
+
+</details>
