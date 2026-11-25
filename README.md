@@ -8,8 +8,6 @@ Pendant mon stage à la Préfecture de la Seine-Saint-Denis, j’ai conçu un ra
 
 ![Comparaison des équipements en 2019 et 2024 dans l’onglet Évolution des départements.](docs/apercu.png)
 
-[Voir l’image en grand format](docs/apercu.png)
-
 ## Télécharger et ouvrir
 
 1. Installe [Power BI Desktop](https://powerbi.microsoft.com/desktop/) si besoin.
