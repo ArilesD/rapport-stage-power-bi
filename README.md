@@ -2,6 +2,8 @@
 
 Pendant mon stage à la Préfecture de la Seine-Saint-Denis, j’ai conçu un rapport pour comparer les équipements des départements et communes franciliens : situation en 2024 et évolution depuis 2019.
 
+L’objectif est de repérer les écarts entre territoires dans des domaines comme la santé, l’enseignement ou les commerces, en comparant les volumes et le nombre d’équipements par habitant.
+
 **Outils :** Power BI, Power Query, DAX, SQLite, DBeaver et Talend Open Studio.
 
 ## Aperçu du projet
